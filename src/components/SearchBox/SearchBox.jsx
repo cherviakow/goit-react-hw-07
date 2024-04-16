@@ -21,8 +21,9 @@ export default function SearchBox() {
         <input
           name="filter"
           type="text"
-          placeholder="find contact"
+          className={css.filterInput}
           value={filter}
+          placeholder="Find contacts"
           onChange={handleFilterChange}></input>
       </label>
     </div>

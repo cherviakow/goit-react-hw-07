@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
+import { addContact } from "../../redux/contactsOps";
 import css from "./Form.module.css";
+import toast from "react-hot-toast";
 
 export default function Form() {
   const dispatch = useDispatch();
@@ -19,7 +20,14 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    dispatch(addContact(name, number));
+    dispatch(addContact({ name, number }))
+      .unwrap()
+      .then(() => {
+        toast.success(`New contact with name ${name} added!`);
+      })
+      .catch(() => {
+        toast.error("Something went wrong..");
+      });
 
     setName("");
     setNumber("");
@@ -27,6 +35,7 @@ export default function Form() {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
+    
       <label>
         <span className={css.label_span}>Name</span>
         <input
