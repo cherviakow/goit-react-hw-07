@@ -35,7 +35,7 @@ export default function Form() {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-    
+    <h1 className={css.phBook}>Phonebook</h1>
       <label>
         <span className={css.label_span}>Name</span>
         <input
@@ -56,7 +56,7 @@ export default function Form() {
           onChange={handleNumberChange}
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button className={css.formBtn} type="submit">Add contact</button>
     </form>
   );
 }

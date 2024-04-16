@@ -1,10 +1,10 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 400px;
   padding: 10px;
-  border: 1px solid rgb(5, 5, 4);
-  border-radius: 5px;
+  border: 2px solid rgb(5, 5, 4);
+  
 }
 
 .label_span {
@@ -14,27 +14,42 @@
 }
 
 input {
+  width: 70%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #acacac;
   border-radius: 4px;
   font-size: 16px;
 
   &:hover {
-    background-color: honeydew;
+    background-color: rgb(255, 255, 255);
 
     border-color: #007bff;
   }
 }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: inherit;
-  font-size: 16px;
+.phBook{
+  font-size: 30px;
+}
+
+.formBtn{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
   cursor: pointer;
+  background-color: white;
+  border-radius: 5px solid black;
+  transition: all 500ms ease;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px solid black;
+  transition: all 500ms ease;
 }
 
 button:hover {
